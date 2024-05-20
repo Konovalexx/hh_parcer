@@ -1,21 +1,3 @@
-def filter_vacancies(vacancies_data: list, filter_words: list):
-    """
-    Filters a list of vacancies based on a list of filter words.
-
-    :param vacancies_data: List of Vacancy objects to filter.
-    :param filter_words: List of words to filter vacancies by.
-
-    :return: Filtered list of Vacancy objects.
-    """
-    filtered_vacancies = []
-    for vacancy in vacancies_data:
-        for word in filter_words:
-            if word.lower() in vacancy.name.lower():
-                filtered_vacancies.append(vacancy)
-                break
-    return filtered_vacancies
-
-
 def get_vacancies_by_salary(vacancies_data: list, salary_range: str):
     """
     Filters vacancies within a specified salary range.
@@ -33,7 +15,6 @@ def get_vacancies_by_salary(vacancies_data: list, salary_range: str):
                 ranged_vacancies.append(vacancy)
     return ranged_vacancies
 
-
 def sort_vacancies(vacancies_data: list):
     """
     Sorts a list of vacancies by their starting salary in descending order.
@@ -43,7 +24,6 @@ def sort_vacancies(vacancies_data: list):
     :return: Sorted list of Vacancy objects.
     """
     return sorted(vacancies_data, key=lambda x: x.salary_from, reverse=True)
-
 
 def get_top_vacancies(vacancies_data: list, top_n):
     """

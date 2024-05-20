@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 import requests
 
-
 class AbstractAPIClient(ABC):
     """
     An abstract base class defining the interface for API clients.
@@ -28,7 +27,6 @@ class AbstractAPIClient(ABC):
         :return: List of dictionaries representing fetched vacancies.
         """
         pass
-
 
 class HHParser(AbstractAPIClient):
     """
