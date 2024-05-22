@@ -2,7 +2,7 @@ class Vacancy:
     """
     Represents a job vacancy with details such as name, URL, description, salary range, and currency.
 
-    Includes methods for converting a vacancy object to and from a dictionary for serialization and deserialization.
+    Includes methods for comparing Vacancy objects based on their starting salary for sorting purposes.
     """
 
     def __init__(self, name, url, description, salary_from, salary_to, currency):
@@ -81,3 +81,27 @@ class Vacancy:
         :return: Vacancy object initialized with data from the dictionary.
         """
         return cls(**dict_item)
+
+    def __lt__(self, other):
+        """Less than operator for comparison based on salary_from."""
+        return self.salary_from < other.salary_from
+
+    def __le__(self, other):
+        """Less than or equal to operator for comparison based on salary_from."""
+        return self.salary_from <= other.salary_from
+
+    def __eq__(self, other):
+        """Equality operator for comparison based on salary_from."""
+        return self.salary_from == other.salary_from
+
+    def __ne__(self, other):
+        """Not equal operator for comparison based on salary_from."""
+        return self.salary_from!= other.salary_from
+
+    def __gt__(self, other):
+        """Greater than operator for comparison based on salary_from."""
+        return self.salary_from > other.salary_from
+
+    def __ge__(self, other):
+        """Greater than or equal to operator for comparison based on salary_from."""
+        return self.salary_from >= other.salary_from
