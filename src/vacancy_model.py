@@ -2,7 +2,7 @@ class Vacancy:
     """
     Represents a job vacancy with details such as name, URL, description, salary range, and currency.
 
-    Includes methods for comparing Vacancy objects based on their starting salary for sorting purposes.
+    Includes methods  for comparing Vacancy objects based on their starting salary for sorting purposes.
     """
 
     def __init__(self, name, url, description, salary_from, salary_to, currency):
